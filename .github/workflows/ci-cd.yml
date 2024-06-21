@@ -28,9 +28,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Mavin Permission
+        run: chmod +x mvnw
 
       - name: Build with Maven
-        run: ./mvnw clean install
+        run:  ./mvnw clean install
 
       - name: Test with Maven
         run: ./mvnw test
